@@ -3,4 +3,14 @@
 
 print("Программа выводит все целые степени двойки!")
 
-N = int(input("Введите число : "))
+N = int(input("Введите Ваше число : "))
+
+if N < 1:
+    print("Некорректный ввод!")
+else:    
+    result = 1
+    while result <= N:
+        step = 0    
+        print(result, end = " ")
+        step += 1
+        result *= 2 ** step

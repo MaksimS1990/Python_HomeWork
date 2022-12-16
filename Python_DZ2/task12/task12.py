@@ -20,6 +20,6 @@ else:
         x = int((s + math.sqrt(D)) / 2)
         y = int(s - x)
         if p == x * y :
-            print(f"Катя угадала: {x} и {y}")
+            print(f"Катя угадала: {x} , {y}")
         else:
             ("Ответа нет!")
