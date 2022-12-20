@@ -17,7 +17,7 @@ n = int(input("Введите длину списка: "))
 x = int(input("Введите искомое число: "))
 a = []
 
-for i in range(0, n):                        # заполнение списка методом рандома
+for i in range(0, n):                                   # заполнение списка методом рандома
     random_num = round(random.randint(0, 5))
     a.append(random_num)
 print(a)
