@@ -13,7 +13,7 @@ os.system('cls')
 from random import randint
 import random
 
-print("Програма ищет наиболее приближенный элемент в списке, относительно числа, который ввёл пользователь!")
+print("Программа ищет наиболее приближенный элемент в списке, относительно числа, который ввёл пользователь!")
 print()
 
 n = int(input("Введите длину списка N: "))
@@ -32,7 +32,8 @@ for i in range(0, len(a)):
     if count > abs(a[i] - x):
         result = (a[i])
         count = abs(a[i] - x)
-    elif a[i] >= a[i] - count:
-        result = a[i]
+    elif (abs(a[i] - x) == count):
+        if result > a[i]:
+            result = a[i]
         
 print(f"Максимально близкое число к введённому Вами - {result}")
