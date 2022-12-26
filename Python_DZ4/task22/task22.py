@@ -34,5 +34,15 @@ for i in range(0, number2):
     m.append(random_num)
 print(m)
 
-my_set1 = {n}
-my_set2 = {m}
+print('Ваши множества a:')
+a = set(n)                                         # приведение из списка во множество
+print(a)
+print('Ваши множества b:')
+b = set(m)
+print(b)
+
+set1 = set(a)
+set2 = set(b)
+result = a.intersection(b)                         # intersection - находит пересечение множеств
+result = sorted(result)                            # сортируем множество по возрастанию элементов
+print(f'Элементы, которые пересекаются в ваших списках: {result}')
