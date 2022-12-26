@@ -35,4 +35,4 @@ for i in range(len(list)):
     if result > max:
         max = result
 
-print(max)
+print(f'Максимальное число ягод: {max}')
