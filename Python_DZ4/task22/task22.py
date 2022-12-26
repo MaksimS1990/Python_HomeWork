@@ -22,7 +22,7 @@ number1 = int(input("Введите количество элементов пе
 n = []
 
 for i in range(0, number1):                        # заполнение списка методом рандома
-    random_num = round(random.randint(0, 9))
+    random_num = round(random.randint(0, 10))
     n.append(random_num)
 print(n)
 
@@ -30,20 +30,6 @@ number2 = int(input("Введите количество элементов вт
 m = []
 
 for i in range(0, number2):
-    random_num = round(random.randint(0, 9))
+    random_num = round(random.randint(0, 10))
     m.append(random_num)
 print(m)
-
-count = 0
-for i in range(0, len(n)):
-    if n[i] == m[i]:
-        count+=1
-        i+=1
-print(count)
-
-temp = 0
-for i in range(0, len(m)):
-    if m[i] == n[i]:
-        temp+=1
-        i+=1
-print(count)
