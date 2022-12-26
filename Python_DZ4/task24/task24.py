@@ -28,10 +28,10 @@ print(list)
 
 result = 0
 max = list[0] + list[1] + list[2]
-for i in range(n - 1):
-    m = list.pop()
-    list.insert(0, m)
-    result = list[0] + list[1] + list[2]
+for i in range(len(list)):
+    m = list.pop()                                # убираем последний элемент списка
+    list.insert(0, m)                             # ставим последний элемент списка на 0 индекс
+    result = list[0] + list[1] + list [2]         # считаем заново, переставив последний элемент на 0 индекс
     if result > max:
         max = result
 
