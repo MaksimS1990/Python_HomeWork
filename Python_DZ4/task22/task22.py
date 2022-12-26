@@ -33,3 +33,6 @@ for i in range(0, number2):
     random_num = round(random.randint(0, 10))
     m.append(random_num)
 print(m)
+
+my_set1 = {n}
+my_set2 = {m}
