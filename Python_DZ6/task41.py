@@ -1,6 +1,3 @@
-# import os
-# os.system('cls')
-
 fileName = 'tel.txt'
 
 def writeFile(fileName):                               # функция записи в файл
@@ -26,14 +23,16 @@ def DeleteUsers(userlist):
         if cancel in user:
             userlist.remove(user)
             print(userlist)
+    return userlist
 
 def overwritingFile(userlist):
     with open (fileName, 'w') as data:
-        data.writelines("'\n' userlist '\n'")
+        for user in userlist:
+            data.writelines(f"{user} \n")
 print(fileName)
 
 # writeFile(fileName)
 # print(readFile(fileName))
 # findUsers(readFile(fileName))
-DeleteUsers(readFile(fileName))
-overwritingFile(readFile(fileName))
+# DeleteUsers(readFile(fileName))
+overwritingFile(DeleteUsers(readFile(fileName)))
