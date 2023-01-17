@@ -1,7 +1,3 @@
-# import os
-# os.system('cls')
-
-
 fileName = 'tel.txt'
 
 def writeFile(fileName):                               # функция записи в файл
