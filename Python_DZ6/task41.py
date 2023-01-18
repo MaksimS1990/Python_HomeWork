@@ -28,7 +28,7 @@ def DeleteUsers(userlist):
 def overwritingFile(userlist):
     with open (fileName, 'w') as data:
         for user in userlist:
-            data.writelines(f"{user} \n")
+            data.writelines(f"\n {user} \n")
 print(fileName)
 
 writeFile(fileName)

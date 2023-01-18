@@ -1,5 +1,12 @@
-['Ivanov,', 'Ivan,', 'ivanovich', '12345'] 
-['Sergeev,', 'Sergey,', 'Sergeevich', '23456'] 
-['Semyenov,', 'Semen,', 'Semyonovich', '34567'] 
-['Petrov,', 'Petor,', 'Petrovich', '45678'] 
-['Dmitriev,', 'Dmitriy,', 'Dmitrievich', '56789'] 
+
+ ['Ivanov,', 'Ivan,', 'ivanovich', '12345'] 
+
+ ['Sergeev,', 'Sergey,', 'Sergeevich', '23456'] 
+
+ ['Semyenov,', 'Semen,', 'Semyonovich', '34567'] 
+
+ ['Dmitriev,', 'Dmitriy,', 'Dmitrievich', '56789'] 
+
+ ['Andreev,', 'Andrey,', 'Andreevich,', '79813'] 
+
+ ['Makarov,', 'Makar,', 'Makarovich,', '53647'] 
