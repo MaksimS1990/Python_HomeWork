@@ -18,12 +18,12 @@ def findUsers(userlist):                              # ищем по индек
             print(user)
     return userlist
 
-def PhoneNumberReplacement(userlist):
-    cancel = input("Введите Ф/И/0/ номер: ")
-    for user in userlist:
-        if cancel in user:
-            cancel[3] =  input("Введите новый номер телефона: ")
-    return userlist
+# def PhoneNumberReplacement(userlist):
+    # cancel = input("Введите Ф/И/0/ номер: ")
+    # for user in userlist:
+        # if cancel in user:
+            # cancel[3] =  input("Введите новый номер телефона: ")
+    # return userlist
 
 def DeleteUsers(userlist):                            # удаляем контакт по Ф/И/О либо номеру телефона
     cancel = input("Введите данные контакта для удаления: ")
