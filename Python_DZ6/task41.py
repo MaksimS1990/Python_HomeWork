@@ -2,7 +2,7 @@ fileName = 'tel.txt'
 
 def writeFile(fileName):                               # функция записи в файл
     with open (fileName, 'a') as data:
-        data.writelines('\n' + input("Введите данные: ") + '\n')
+        data.writelines('\n' + input("Введите данные контакта: ") + '\n')
     
 def readFile(fileName):                                # функция чтения из файла
     result = []                                        # создаем пустой список
@@ -12,13 +12,14 @@ def readFile(fileName):                                # функция чтен
         return result
 
 def findUsers(userlist):                              # ищем по индексу (Имя -> номер телефона)
-    name = input("Введите имя: ")
+    cancel = input("Введите Ф/И/0/номер: ")
     for user in userlist:
-        if user[1] == name:
-            print(user[3])
+        if cancel in user:
+            print(user)
+    return userlist
 
 def DeleteUsers(userlist):
-    cancel = input("Введите данные: ")
+    cancel = input("Введите данные контакта для удаления: ")
     for user in userlist:
         if cancel in user:
             userlist.remove(user)
@@ -28,7 +29,7 @@ def DeleteUsers(userlist):
 def overwritingFile(userlist):
     with open (fileName, 'w') as data:
         for user in userlist:
-            data.writelines(f"\n {user} \n")
+            data.writelines(f"\n {user}")
 print(fileName)
 
 writeFile(fileName)
