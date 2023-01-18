@@ -19,6 +19,11 @@ def findUsers(userlist):                              # ищем по индек
     return userlist
 
 def PhoneNumberReplacement(userlist):
+    cancel = input("Введите Ф/И/0/ номер: ")
+    for user in userlist:
+        if cancel in user:
+            cancel[3] =  input("Введите новый номер телефона: ")
+    return userlist
 
 def DeleteUsers(userlist):                            # удаляем контакт по Ф/И/О либо номеру телефона
     cancel = input("Введите данные контакта для удаления: ")
@@ -37,4 +42,5 @@ print(fileName)
 writeFile(fileName)
 print(readFile(fileName))
 findUsers(readFile(fileName))
+PhoneNumberReplacement(readFile(fileName))
 overwritingFile(DeleteUsers(readFile(fileName)))
