@@ -11,18 +11,20 @@ def readFile(fileName):                                # функция чтен
             result.append(line.split())                # преобразуем строку в список
         return result
 
-def findUsers(userlist):                              # ищем по индексу (Имя -> номер телефона)
-    cancel = input("Введите Ф/И/0/номер: ")
+def findUsers(userlist):                              # ищем по индексу (Имя -> данные контакта)
+    cancel = input("Введите Ф/И/0/ номер: ")
     for user in userlist:
         if cancel in user:
             print(user)
     return userlist
 
-def DeleteUsers(userlist):
+def PhoneNumberReplacement(userlist):
+
+def DeleteUsers(userlist):                            # удаляем контакт по Ф/И/О либо номеру телефона
     cancel = input("Введите данные контакта для удаления: ")
     for user in userlist:
         if cancel in user:
-            userlist.remove(user)
+            userlist.remove(user)                     # remove - функция удаления списка
             print(userlist)
     return userlist
 
