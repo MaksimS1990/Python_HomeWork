@@ -46,8 +46,11 @@ def writingNewNumber(result):
 
 def fileOverwritting(Kraken):
      with open (MainFile, 'w') as data:
-        data.writelines(Kraken + '\n')
-
+        data.writelines(Kraken)
+        Kraken = MainFile
+        return MainFile
+print(MainFile)
+    
 # writeFile(fileName)
 # print(readFile(fileName))
 # print(findUsers(readFile(fileName)))
