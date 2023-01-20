@@ -1,2 +1,0 @@
- Ivanov, Ivan, ivanovich, 12345
- Sergeev, Sergey, Sergeevich, 23454

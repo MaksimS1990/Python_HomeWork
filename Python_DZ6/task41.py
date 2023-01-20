@@ -1,4 +1,4 @@
-fileName = 'tel.txt'
+MainFile = 'tel.txt'
 
 def ConvertToString(listUser):
     stringUser = ''
@@ -11,13 +11,13 @@ def ConvertToList(stringUser):
     stringUser = stringUser.replace('\n','')
     return list(stringUser.split(', '))
 
-def writeFile(fileName):
-    with open (fileName, 'a') as data:
+def writeFile():
+    with open (MainFile, 'a') as data:
         data.writelines(input("Введите данные нового контакта: ") + '\n')
 
-def readFile(fileName):                                          # функция чтения из файла 
+def readFile():                                          # функция чтения из файла 
     result = []                                                  # создаем пустой список 
-    with open (fileName, 'r+') as data: 
+    with open (MainFile, 'r+') as data: 
         for line in data:                                        # бежим по списку списков 
             result.append(ConvertToList(line))                   # преобразуем строку в список
         return result
@@ -44,13 +44,13 @@ def writingNewNumber(result):
                 print(result)
     return result
 
-def fileOverwritting(fileName):
-     with open (fileName, 'w') as data:
-         data.writelines(result + '\n')
+def fileOverwritting(Kraken):
+     with open (MainFile, 'w') as data:
+        data.writelines(Kraken + '\n')
 
 # writeFile(fileName)
 # print(readFile(fileName))
 # print(findUsers(readFile(fileName)))
 # DeleteUsers(readFile(fileName))
-writingNewNumber(readFile(fileName))
-fileOverwritting(readFile(fileName))
+writingNewNumber(readFile())
+fileOverwritting(readFile())
