@@ -53,7 +53,7 @@ def writingNewNumber(file_name):
             data.write(i)
 
 cls()
-def MainMenu():
+def MainMenu():                                   # функция основного меню
 
     print("   Телефонный справочник   \n"
       "       Главное меню        \n"
