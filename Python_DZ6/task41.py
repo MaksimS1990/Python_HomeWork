@@ -21,7 +21,7 @@ def readFile(file_name):                                          # функци
 
 
 def findUsers(file_name):
-    with open (file_name, 'r') as data:                           # ищем по индексу (Имя -> данные контакта)
+    with open (file_name, 'r') as data:                           # ищем по индексу (Пример: Имя -> данные контакта)
         cancel = input("Введите Ф/И/0/ или номер искомого контакта: ")
         for user in data:
                 if cancel in user:
