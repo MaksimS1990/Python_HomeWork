@@ -40,7 +40,7 @@ def DeleteUsers(file_name):                                       # удаляе
         for i in line:
             data.write(i)
 
-def writingNewNumber(file_name):
+def writingNewNumber(file_name):                                   # функция замены номера контакта
     with open (file_name, 'r') as data: 
         line = data.readlines()
     cancel = int(input("Введите порядковый номер абонента для изменения номера телефона: "))
