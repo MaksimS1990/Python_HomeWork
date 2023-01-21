@@ -7,17 +7,6 @@ cls()
 
 MainFile = 'tel.txt'
 
-# def ConvertToString(listUser):
-#     stringUser = ''
-#     for i in range(0, len(listUser)-1):
-#         stringUser = stringUser + listUser[i] + ', '
-#     stringUser = stringUser + listUser[-1]
-#     return stringUser
-
-# def ConvertToList(stringUser):
-#     stringUser = stringUser.replace('\n','')
-#     return list(stringUser.split(', '))
-
 def writeFile(file_name):
     with open (file_name, 'a') as data:
         data.writelines(input("Введите данные нового контакта: ") + '\n')
@@ -63,22 +52,6 @@ def writingNewNumber(file_name):
         for i in line:
             data.write(i)
 
-# def fileOverwritting(Kraken):
-#      with open (MainFile, 'w') as data:
-#         data.writelines(Kraken)
-#         Kraken = MainFile
-#         return MainFile
-# print(MainFile)
-    
-# writeFile(MainFile)
-# readFile(MainFile)
-# findUsers(MainFile)
-# DeleteUsers(MainFile)
-# readFile(MainFile)
-# writingNewNumber(MainFile)
-# MainMenu()
-# PhoneBookMenu()
-# fileOverwritting(readFile())
 cls()
 def MainMenu():
 
