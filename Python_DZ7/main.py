@@ -13,7 +13,8 @@ menuitems = [
         ("7", "Удалить автобус"),
         ("8", "Удалить водителя"),
         ("9", "Удалить маршрут"),
-        ("10", "Выход", lambda: exit())]
+        ("10", "Вывести полную информацию по маршруту, водителю и автобусу"),
+        ("11", "Выход", lambda: exit())]
 
 menu = Menu(menuitems)
     # menu.run('>:')
@@ -21,7 +22,7 @@ menu = Menu(menuitems)
 for i in menuitems:
     print(i[0],i[1])
 
-text = input("Введите номер: ")
+text = input("Введите номер команды для выполнения: ")
 if text == '1':
     print(fn.print_bus())
 elif text == '2':
@@ -40,3 +41,5 @@ elif text == '8':
     fn.DeleteInfo('driver.txt')
 elif text == '9':
     fn.DeleteInfo('route.txt')
+elif text == '10':
+    fn.DetailingRoute('route.txt', 'bus.txt', 'driver.txt')
