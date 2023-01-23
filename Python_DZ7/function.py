@@ -28,6 +28,13 @@ def print_route():
 def add_route():
     save_data_to_file('route.txt', input("Введите маршрут: "))
 
-
+def DeleteInfo(name):                                                     # удаляем контакт по Ф/И/О либо номеру телефона
+    with open(name, 'r') as data:
+        line = data.readlines()
+    cancel = int(input("Введите порядковый номер для удаления: "))
+    del line[cancel - 1]
+    with open (name, 'w') as data:
+        for i in line:
+            data.write(i)
 
 

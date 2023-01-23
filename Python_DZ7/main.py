@@ -10,7 +10,10 @@ menuitems = [
         ("4", "Добавление водителей"),
         ("5", "Вывод маршрута"),
         ("6", "Добавление маршрута"),
-        ("7", "Выход", lambda: exit())]
+        ("7", "Удалить автобус"),
+        ("8", "Удалить водителя"),
+        ("9", "Удалить маршрут"),
+        ("10", "Выход", lambda: exit())]
 
 menu = Menu(menuitems)
     # menu.run('>:')
@@ -31,4 +34,9 @@ elif text == '5':
     print(fn.print_route())
 elif text == '6':
     fn.add_route()
-
+elif text == '7':
+    fn.DeleteInfo('bus.txt')
+elif text == '8':
+    fn.DeleteInfo('driver.txt')
+elif text == '9':
+    fn.DeleteInfo('route.txt')
