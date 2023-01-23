@@ -44,18 +44,24 @@ def DetailingRoute(name1, name2, name3):
         print(str(result))
         
         number = int(input("Выберите маршрут: "))
+        result1 = []
         count = 0
         with open(name2, 'r', encoding='utf8') as datafile1:
-            for i in datafile1:
+            for line in datafile:
+                result1.append(line.strip('\n').split(','))
                 for i in datafile1:
-                    if result[number] == i:
-                        count = i
+                    for number in i:
+                        for result1 in i:
+                            count = i
             print(count)
-                
+
+        result2 = []
         count2 = 0
         with open(name3, 'r', encoding='utf8') as datafile2:
-            for i in datafile2:
+            for line in datafile:
+                result2.append(line.strip('\n').split(','))
                 for i in datafile2:
-                    if result[number] == i:
-                        count2 = i
+                    for number in i:
+                        for result2 in i:
+                            count2 = i
             print(count2)
