@@ -41,21 +41,23 @@ def DetailingRoute(name1, name2, name3):
     with open(name1, 'r', encoding='utf8') as datafile:
         for line in datafile:
             result.append(line.strip('\n').split(','))
-        print(str(result))
-        
-        number = int(input("Выберите маршрут: "))
-        count = 0
-        with open(name2, 'r', encoding='utf8') as datafile1:
-            for i in datafile1:
-                for i in datafile1:
-                    if result[number] == i:
-                        count = i
-            print(count)
-                
-        count2 = 0
-        with open(name3, 'r', encoding='utf8') as datafile2:
-            for i in datafile2:
-                for i in datafile2:
-                    if result[number] == i:
-                        count2 = i
-            print(count2)
+        print(result)    
+    number = int(input("Выберите маршрут: "))
+    
+    result_bus = []
+    with open('bus.txt', 'r', encoding='utf8') as datafile1:
+        for line in datafile1:
+                datafile1 = result_bus.append(line.strip('\n').split(','))
+                for line in result_bus:
+                    for i in line:
+                        if i == result_bus[number - 1][1]:
+                            print(result_bus[0][1])
+
+    result_driver = []
+    with open('driver.txt', 'r', encoding='utf8') as datafile2:
+        for line in datafile2:
+            datafile2 = result_driver.append(line.strip('\n').split(','))
+            for line in result_driver:
+                for i in line:
+                    if i == result_driver[number - 1][1]:
+                        print(result_driver[0][1])
