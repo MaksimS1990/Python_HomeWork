@@ -36,28 +36,22 @@ def DeleteInfo(name):                                                     # уд
         for i in line:
             data.write(i)
 
-def DetailingRoute(name1, name2, name3):
-    result = []
-    with open(name1, 'r', encoding='utf8') as datafile:
-        for line in datafile:
-            result.append(line.strip('\n').split(','))
-        print(result)    
-    number = int(input("Выберите маршрут: "))
-    
-    result_bus = []
-    with open('bus.txt', 'r', encoding='utf8') as datafile1:
-        for line in datafile1:
-                datafile1 = result_bus.append(line.strip('\n').split(','))
-                for line in result_bus:
-                    for i in line:
-                        if i == result_bus[number - 1][1]:
-                            print(result_bus[0][1])
+def DetailingRoute(name, name2, name3):
+    value = []
+    with open(name, 'r', encoding='utf8') as data_file:
+        number = input("Выберите маршрут детализации данных по нему: ")
+        for route in data_file:
+            if number in route:  
+                value = route.strip().split(',')
 
-    result_driver = []
-    with open('driver.txt', 'r', encoding='utf8') as datafile2:
-        for line in datafile2:
-            datafile2 = result_driver.append(line.strip('\n').split(','))
-            for line in result_driver:
-                for i in line:
-                    if i == result_driver[number - 1][1]:
-                        print(result_driver[0][1])
+    with open(name2, 'r', encoding='utf8') as data_bus:
+        cancel = value[2].strip()
+        for bus in data_bus:
+            if cancel == bus.split(',')[0]:
+                print(bus)
+                
+    with open(name3, 'r', encoding='utf8') as data_driver:
+        cancel = value[3].strip()
+        for driver in data_driver:
+            if cancel in driver:
+                print(driver)
