@@ -1,8 +1,8 @@
-n = '22 * 300 - 14 + 10 * 10'
+n = ' 22 * 300 - 14 + 10 * 10 '
 
-n.split()
+m = n.split()
 
-print(n)
+print(m)
 
 def calc(a, b, ch):
     if ch == '+':
@@ -15,22 +15,25 @@ def calc(a, b, ch):
         return a * b
     
 stack = []
-B = []
-for i in range(1, len(n) - 1):
-    if n[i] == '*' or n[i] == '/' or n[i] == '+' or n[i] == '-':
-            B.append(n[i])
-    while B[i] == '*' or '/' and B[i] == '+' or '-':
-        B.pop()
-        stack.append(B[i])
-
+numbers = []
+for i in range(0, len(m)):
+    if m[i] == '/' or m[i] == '*' or m[i] == '+' or m[i] == '-':
+        stack.append(m[i])
+        while(stack == ["'/', '+'"] or stack == ["'/', '-'"] or stack == ["'*', '+'"] or stack == ["'*', '-'"]):
+            temp = stack.pop()
+            numbers.append(temp)    
     else: 
-        stack.append(int(n[i]))
+        numbers.append(m[i])
+print(numbers, stack)
 
 
 
+# while(stack == ["'/', '+'"] or stack == ["'/', '-'"] or stack == ["'*', '+'"] or stack == ["'*', '-'"]):
 
-
-
+#     while numbers[i] == '*' or numbers[i] == '/' and numbers[i] == '+' or numbers[i] == '-':
+    #         numbers.append(n[i])
+    #         numbers.pop()
+    #     stack.append(stack[i])
 
 
 
