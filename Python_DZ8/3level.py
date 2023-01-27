@@ -14,7 +14,7 @@ def calc(a, b, ch):
     elif ch == '*':
         return a * b
     
-stack = []
+stack = [n]
 B = []
 for i in range(1, len(n) - 1):
     if n[i] == '*' or n[i] == '/' or n[i] == '+' or n[i] == '-':
