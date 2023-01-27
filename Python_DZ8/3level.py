@@ -1,8 +1,6 @@
-n = '22 * 300 - 14 + 10 * 10'
+n = input('Введите выражение, которое нужно посчитать:')
 
-n.split()
-
-print(n)
+m = n.split()
 
 def calc(a, b, ch):
     if ch == '+':
@@ -13,42 +11,52 @@ def calc(a, b, ch):
         return a / b
     elif ch == '*':
         return a * b
+
+stack = [' ']
+numbers = []
+for i in range(0, len(m)):
     
-stack = [n]
-B = []
-for i in range(1, len(n) - 1):
-    if n[i] == '*' or n[i] == '/' or n[i] == '+' or n[i] == '-':
-            B.append(n[i])
-    while B[i] == '*' or '/' and B[i] == '+' or '-':
-        B.pop()
-        stack.append(B[i])
+    if m[i] == '/' or m[i] == '*':
+        if stack[-1] == '*' or stack[-1] == '/':
+            numbers.append(stack[-1])
+            stack.pop()
+        stack.append(m[i]) 
 
+    elif m[i] == '+' or m[i] == '-':
+        while stack[-1] == "*" or stack[-1] == "/" or stack[-1] == "+" or stack[-1] == "-":
+            numbers.append(stack[-1])
+            stack.pop()
+        stack.append(m[i])    
     else: 
-        stack.append(int(n[i]))
+        numbers.append(m[i])
+print(numbers, stack)
 
+stack.reverse()
+stack.pop()
 
+numbers += stack
+# print(numbers)
 
+result = []
 
+for i in range(len(numbers)):
+    if numbers[i] in '*':
+        q = float(result.pop())
+        z = float(result.pop())
+        result.append(q * z)
+    elif numbers[i] in '/':
+        q = float(result.pop())
+        z = float(result.pop())
+        result.append(z / q)
+    elif numbers[i] in '+':
+        q = float(result.pop())
+        z = float(result.pop())
+        result.append(q + z)
+    elif numbers[i] in '-':
+        q = float(result.pop())
+        z = float(result.pop())
+        result.append((z - q))
+    else:
+        result.append(numbers[i])
 
-
-
-
-
-# a = int(m[0])
-# c = m[1]
-# b = int(m[2])
-
-# result = int(m[0])
-
-# for i in range(1, len(m) - 1, 2):
-#     if m[i] == '*' or m[i] == '/':
-#         result = calc(int(m[i - 1]), int(m[i + 1]), m[i])
-#         m2.append(result)
-#     else:
-#         m2.append(m[i])
-#         m2.append(int(m[i + 1]))
-
-
-# print(m[i], m[i + 1])
-# print(m2)
-# print(result)
+print(result)
