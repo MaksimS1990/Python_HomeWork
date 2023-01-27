@@ -1,4 +1,4 @@
-n = input('Введите выражение, которое нужно посчитать:')
+n = input('Введите выражение, которое нужно посчитать: ')
 
 m = n.split()
 
@@ -29,7 +29,7 @@ for i in range(0, len(m)):
         stack.append(m[i])    
     else: 
         numbers.append(m[i])
-print(numbers, stack)
+# print(numbers, stack)
 
 stack.reverse()
 stack.pop()
